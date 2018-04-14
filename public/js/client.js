@@ -58,13 +58,15 @@ TrelloPowerUp.initialize({
     },
 });
 
+var WHITE_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-white.svg';
+
 window.TrelloPowerUp.initialize({
     'format-url': function (t, options) {
         // options.url has the url that we are being asked to format
         // in our response we can include an icon as well as the replacement text
 
         return {
-            icon: GRAY_ICON, // don't use a colored icon here
+            icon: BLACK_ROCKET_ICON, // don't use a colored icon here
             text: '👉 ' + options.url + ' 👈'
         };
 
@@ -73,8 +75,6 @@ window.TrelloPowerUp.initialize({
         // throw t.NotHandled();
     }
 });
-
-var WHITE_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-white.svg';
 
 var onReadMe = function (t, opts) {
     return t.popup({
