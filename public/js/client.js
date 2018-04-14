@@ -13,9 +13,19 @@ TrelloPowerUp.initialize({
             callback: function (t) {
                 console.log(t);
                 console.log(options);
+                console.log(options.context.card);
+                console.log(options.context.board);
+                console.log(options.context.member);
+
+
+                t.set(options.context.card, 'shared', 'TimeSpent', 521);
+
+                t.get(options.context.card, 'shared', 'TimeSpent').then(function (data) {
+                    console.log(data);
+                });
+
+
             }
         }];
     },
 });
-
-Tre
